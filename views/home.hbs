@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Some Website</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <!-- Compiled and minified JavaScript -->
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  </head>
+  <body>
+    {{> nav}}
+    <div class="container">
+      <div class="row">
+        <h4> HOUSES'n'TOWN</h4>
+      </div>
+      <div class="row">
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <form  action="/reqGarbage" method="post">
+              <div class="card-content">
+
+                <h5>House 1</h5>
+
+                  <input type="hidden" id="houseno" name="houseno" value="3487">
+
+              </div>
+              <div class="card-action">
+                <!-- <a href="#" role="button" type="submit">Pick Garbage</a> -->
+                <a href="javascript:void(0);">Pick Garbage</a>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 2</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 3</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 4</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 5</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 6</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 7</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 8</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 9</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 10</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 11</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>House 12</h5>
+              </div>
+              <div class="card-action">
+                <a href="#">Pick Garbage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- {{> header}} -->
+    <!-- <p>{{screamIt welcomeMessage}}</p> -->
+    {{> footer}}
+
+    <script type="text/javascript">
+      $(document).ready(() => {
+
+      });
+      function sendHomeD(house){
+        console.log(house);
+          $.ajax({
+            url:'http://localhost:3000/reqGarbage',
+            data:house,
+            type:'POST'
+          });
+      }
+    </script>
+  </body>
+</html>
